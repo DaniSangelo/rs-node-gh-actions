@@ -1,5 +1,5 @@
 import { UsersRepository } from '@/repositories/users-repository'
-import { hash } from 'bcryptjs'
+import bcrypt from 'bcryptjs'
 import { UserAlreadyExistException } from './errors/user-already-exist-exception'
 import { User } from '@prisma/client'
 const SALT_ROUNDS = 6
@@ -23,7 +23,7 @@ export class RegisterUseCase {
   }: RegisterUseCaseDTO): Promise<CreatedUserDTO> {
     const userAlreadyExist = await this.usersRepository.findByEmail(email)
     if (userAlreadyExist) throw new UserAlreadyExistException()
-    const passwordHash = await hash(password, SALT_ROUNDS)
+    const passwordHash = await bcrypt.hash(password, SALT_ROUNDS)
     const user = await this.usersRepository.create({
       name,
       email,
