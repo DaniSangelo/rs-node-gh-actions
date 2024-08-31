@@ -2,7 +2,7 @@ import { InMemoryUsersRepository } from '@/repositories/in-memory/in-memory-user
 import { describe, expect, it, beforeEach } from 'vitest'
 import { GetUserProfileUseCase } from '../use-cases/get-user-profile'
 import { hash } from 'bcryptjs'
-import { ResourceNotFoundException } from '../use-cases/errors/resource-not-found-exception'
+import { ResourceNotFoundException } from '../use-cases/exceptions/resource-not-found-exception'
 
 let usersRepository: InMemoryUsersRepository
 let getUserProfileUseCase: GetUserProfileUseCase

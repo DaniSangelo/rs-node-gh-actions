@@ -1,6 +1,6 @@
 import { UsersRepository } from '@/repositories/users-repository'
 import { User } from '@prisma/client'
-import { ResourceNotFoundException } from './errors/resource-not-found-exception'
+import { ResourceNotFoundException } from './exceptions/resource-not-found-exception'
 
 interface GetUserProfileRequestDTO {
   userId: string

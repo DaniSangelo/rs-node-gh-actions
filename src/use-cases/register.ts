@@ -1,6 +1,6 @@
 import { UsersRepository } from '@/repositories/users-repository'
 import bcrypt from 'bcryptjs'
-import { UserAlreadyExistException } from './errors/user-already-exist-exception'
+import { UserAlreadyExistException } from './exceptions/user-already-exist-exception'
 import { User } from '@prisma/client'
 const SALT_ROUNDS = 6
 
