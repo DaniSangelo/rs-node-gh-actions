@@ -1,6 +1,5 @@
 import { InMemoryGymsRepository } from '@/repositories/in-memory/in-memory-gyms-repository'
 import { CreateGymUseCase } from '@/use-cases/create-gym'
-import { randomUUID } from 'crypto'
 import { beforeEach, expect, describe, it } from 'vitest'
 
 let gymsRepository: InMemoryGymsRepository
