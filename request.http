@@ -1,4 +1,4 @@
-POST http://localhost:3333/users
+POST http://localhost:3333/user
 Content-Type: application/json
 
 {
@@ -8,7 +8,7 @@ Content-Type: application/json
 }
 
 ###
-POST http://localhost:3333/sessions
+POST http://localhost:3333/user/sessions
 Content-Type: application/json
 
 {
@@ -17,16 +17,30 @@ Content-Type: application/json
 }
 
 ###
-POST http://localhost:3333/users
-Content-Type: application/json
 
-{
-    "name": "Daniel",
-    "email": "daniel5@mail.com",
-    "password": "123456"
-}
-
-###
-GET http://localhost:3333/me
+GET http://localhost:3333/user/me
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjlhMGVkZC00N2U2LTRhZGUtODcyMi1hNjM2OTMyN2U4ZTgiLCJpYXQiOjE3MjcwMzMxNzd9.BMpNh0GUM5TiX92RC6xjUOYf8oh4vT2-L-6NM5edSW4
+
+###
+POST http://localhost:3333/gym
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjlhMGVkZC00N2U2LTRhZGUtODcyMi1hNjM2OTMyN2U4ZTgiLCJpYXQiOjE3MjcxMzU5ODF9.wz51bCmkIWZjzNYduzDGnubleIotg-2uDwnJs1hkHIE
+
+{
+    "title": "Outfit 2",
+    "description": "Cadimia aqui pertin 2",
+    "phone": "",
+    "latitude": -19.9525922,
+    "longitude": -43.999216
+}
+
+###
+GET http://localhost:3333/gym?query=Outfit 2&page=1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjlhMGVkZC00N2U2LTRhZGUtODcyMi1hNjM2OTMyN2U4ZTgiLCJpYXQiOjE3MjcxMzU5ODF9.wz51bCmkIWZjzNYduzDGnubleIotg-2uDwnJs1hkHIE
+
+###
+GET http://localhost:3333/gym/nearby?latitude=-19.9525922&longitude=-43.999216
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjlhMGVkZC00N2U2LTRhZGUtODcyMi1hNjM2OTMyN2U4ZTgiLCJpYXQiOjE3MjcxMzU5ODF9.wz51bCmkIWZjzNYduzDGnubleIotg-2uDwnJs1hkHIE
