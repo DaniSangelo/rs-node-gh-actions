@@ -6,7 +6,6 @@ export async function profile(request: FastifyRequest, reply: FastifyReply) {
   const { user } = await getUserProfile.execute({
     userId: request.user.sub,
   })
-  console.log('aqui', user)
   const { password, ...userWithoutPassword } = user
   return reply.status(200).send({ user: { ...userWithoutPassword } })
 }

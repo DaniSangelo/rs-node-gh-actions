@@ -12,13 +12,13 @@ describe('Authenticate a user (e2e)', () => {
   })
 
   it('should be able to Authenticate a user', async () => {
-    await request(app.server).post('/users').send({
+    await request(app.server).post('/user').send({
       name: 'Jon Doe',
       email: 'jondoe@mail.com',
       password: '123456',
     })
 
-    const response = await request(app.server).post('/sessions').send({
+    const response = await request(app.server).post('/user/sessions').send({
       email: 'jondoe@mail.com',
       password: '123456',
     })
@@ -26,7 +26,7 @@ describe('Authenticate a user (e2e)', () => {
     expect(response.statusCode).toEqual(200)
     expect(response.body).toEqual(
       expect.objectContaining({
-        access_token: expect.stringMatching(
+        accessToken: expect.stringMatching(
           /^[A-Za-z0-9-_=]+\.[A-Za-z0-9-_=]+\.?[A-Za-z0-9-_.+/=]*$/,
         ),
       }),

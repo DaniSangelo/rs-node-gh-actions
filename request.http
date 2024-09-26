@@ -25,7 +25,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjlhMGVkZ
 ###
 POST http://localhost:3333/gym
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjlhMGVkZC00N2U2LTRhZGUtODcyMi1hNjM2OTMyN2U4ZTgiLCJpYXQiOjE3MjcxMzU5ODF9.wz51bCmkIWZjzNYduzDGnubleIotg-2uDwnJs1hkHIE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjlhMGVkZC00N2U2LTRhZGUtODcyMi1hNjM2OTMyN2U4ZTgiLCJpYXQiOjE3MjczMDcxNjN9.OJ0OOl7-rhHINLtxeYA3kSqJj_JGNlXKAhUwTE0bFlw
 
 {
     "title": "Outfit 2",
@@ -38,7 +38,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjlhMGVkZ
 ###
 GET http://localhost:3333/gym?query=Outfit 2&page=1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjlhMGVkZC00N2U2LTRhZGUtODcyMi1hNjM2OTMyN2U4ZTgiLCJpYXQiOjE3MjcxMzU5ODF9.wz51bCmkIWZjzNYduzDGnubleIotg-2uDwnJs1hkHIE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjlhMGVkZC00N2U2LTRhZGUtODcyMi1hNjM2OTMyN2U4ZTgiLCJpYXQiOjE3MjczMDcxNjN9.OJ0OOl7-rhHINLtxeYA3kSqJj_JGNlXKAhUwTE0bFlw
 
 ###
 GET http://localhost:3333/gym/nearby?latitude=-19.9525922&longitude=-43.999216
