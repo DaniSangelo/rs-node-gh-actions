@@ -1,6 +1,6 @@
 import { InMemoryCheckInsRepository } from '@/repositories/in-memory/in-memory-check-ins-repository'
 import { expect, beforeEach, describe, it, vi, afterEach } from 'vitest'
-import { ValidateCheckInUseCase } from '../use-cases/validate-check-in'
+import { ValidateCheckInUseCase } from '../validate-check-in'
 import { ResourceNotFoundException } from '@/use-cases/exceptions/resource-not-found-exception'
 import { LateCheckInValidationException } from '@/use-cases/exceptions/late-check-in-validation-exception'
 
