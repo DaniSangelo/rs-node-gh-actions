@@ -43,4 +43,29 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjlhMGVkZ
 ###
 GET http://localhost:3333/gym/nearby?latitude=-19.9525922&longitude=-43.999216
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjlhMGVkZC00N2U2LTRhZGUtODcyMi1hNjM2OTMyN2U4ZTgiLCJpYXQiOjE3MjcxMzU5ODF9.wz51bCmkIWZjzNYduzDGnubleIotg-2uDwnJs1hkHIE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjlhMGVkZC00N2U2LTRhZGUtODcyMi1hNjM2OTMyN2U4ZTgiLCJpYXQiOjE3MjczMTIzMzF9.sTXrprIeoNnWjUTw1rsYR6CdWbEvoyISCbf_tF1bgrU
+
+###
+POST http://localhost:3333/gym/60f2f594-f573-44e3-8706-f925ec933603/check-in
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjlhMGVkZC00N2U2LTRhZGUtODcyMi1hNjM2OTMyN2U4ZTgiLCJpYXQiOjE3MjczMTIzMzF9.sTXrprIeoNnWjUTw1rsYR6CdWbEvoyISCbf_tF1bgrU
+
+{
+    "latitude": -19.9525922,
+    "longitude": -43.999216
+}
+
+###
+GET http://localhost:3333/check-ins/history
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjlhMGVkZC00N2U2LTRhZGUtODcyMi1hNjM2OTMyN2U4ZTgiLCJpYXQiOjE3MjczMTIzMzF9.sTXrprIeoNnWjUTw1rsYR6CdWbEvoyISCbf_tF1bgrU
+
+###
+POST http://localhost:3333/check-ins/:checkinId/validate
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjlhMGVkZC00N2U2LTRhZGUtODcyMi1hNjM2OTMyN2U4ZTgiLCJpYXQiOjE3MjczMTIzMzF9.sTXrprIeoNnWjUTw1rsYR6CdWbEvoyISCbf_tF1bgrU
+
+{
+    "latitude": -19.9525922,
+    "longitude": -43.999216
+}

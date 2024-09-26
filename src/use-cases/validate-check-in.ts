@@ -1,10 +1,6 @@
 import { CheckIn } from '@prisma/client'
 import { CheckInsRepository } from '@/repositories/check-ins-repository'
-import { GymsRepository } from '@/repositories/gyms-repository'
 import { ResourceNotFoundException } from './exceptions/resource-not-found-exception'
-import { getDistanceBetweenCoordinates } from '@/utils/get-distance-between-coordinates'
-import { MaxDistanceException } from './exceptions/max-distance-exception'
-import { MaxNumberOfCheckInsException } from './exceptions/max-number-of-check-ins-exception'
 import dayjs from 'dayjs'
 import { LateCheckInValidationException } from './exceptions/late-check-in-validation-exception'
 
