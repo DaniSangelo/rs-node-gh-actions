@@ -17,6 +17,9 @@ Content-Type: application/json
 }
 
 ###
+PATCH http://localhost:3333/user/token/refresh
+
+###
 
 GET http://localhost:3333/user/me
 Content-Type: application/json
