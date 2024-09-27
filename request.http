@@ -12,7 +12,7 @@ POST http://localhost:3333/user/sessions
 Content-Type: application/json
 
 {
-    "email": "daniel5@mail.com",
+    "email": "daniel1@mail.com",
     "password": "123456"
 }
 
@@ -28,7 +28,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjlhMGVkZ
 ###
 POST http://localhost:3333/gym
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjlhMGVkZC00N2U2LTRhZGUtODcyMi1hNjM2OTMyN2U4ZTgiLCJpYXQiOjE3MjczMDcxNjN9.OJ0OOl7-rhHINLtxeYA3kSqJj_JGNlXKAhUwTE0bFlw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJzdWIiOiIxNDc3NTdhNy0yM2QyLTQ5ZDgtOTY2Yy04MTQ0N2ExMzIzNzQiLCJpYXQiOjE3MjczOTY0NDQsImV4cCI6MTcyODAwMTI0NH0.0yOSR7nJAfvCWBg16L8y7imrIkZHCEtua3Qol7bEVsw
 
 {
     "title": "Outfit 2",
