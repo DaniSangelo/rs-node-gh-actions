@@ -1,5 +1,5 @@
 import 'dotenv/config'
-import { randomUUID } from 'crypto'
+import { randomUUID } from 'node:crypto'
 import { Environment } from 'vitest'
 import { execSync } from 'node:child_process'
 import { PrismaClient } from '@prisma/client'
@@ -17,7 +17,7 @@ function generateDatabaseURL(schema: string) {
 
 export default <Environment>{
   name: 'prisma',
-  transformMode: 'ssr',
+  // transformMode: 'ssr',
   async setup() {
     const schema = randomUUID()
     const dbUrl = generateDatabaseURL(schema)
