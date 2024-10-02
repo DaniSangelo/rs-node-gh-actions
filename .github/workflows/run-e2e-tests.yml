@@ -16,8 +16,22 @@ jobs:
           POSTGRESQL_USERNAME: daniel
           POSTGRESQL_PASSWORD: daniel
           POSTGRESQL_DATABASE: api-solid
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
 
     steps:
+      - name: Wait for PostgreSQL to be ready
+        run: |
+          for i in `seq 1 30`; do
+            nc -z localhost 5432 && echo "Postgres is up!" && exit 0
+            echo "Waiting for Postgres..."
+            sleep 1
+          done
+          echo "Postgres did not start in time" && exit 1
+
       # baixa o código para a máquina ubuntu definida em runs-on
       - uses: actions/checkout@v3
       # configura a versão do node
@@ -30,4 +44,4 @@ jobs:
       - run: npm run test:e2e
         env:
           JWT_SECRET: testing
-          DATABASE_URL: "postgresql://daniel:daniel@localhost:5432/mydb?schema=api-solid"
+          DATABASE_URL: postgresql://daniel:daniel@localhost:5432/api-solid
