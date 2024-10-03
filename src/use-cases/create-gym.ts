@@ -1,4 +1,4 @@
-import { Gym, User } from '@prisma/client'
+import { Gym } from '@prisma/client'
 import { GymsRepository } from '@/repositories/gyms-repository'
 
 interface CreateGymUseCaseDTO {

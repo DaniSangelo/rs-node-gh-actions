@@ -7,8 +7,8 @@ const SALT_ROUNDS = 6
 interface RegisterUseCaseDTO {
   email: string
   name: string
-  password: string,
-  role?: Role,
+  password: string
+  role?: Role
 }
 
 interface CreatedUserDTO {
@@ -30,7 +30,7 @@ export class RegisterUseCase {
       name,
       email,
       password: passwordHash,
-      role
+      role,
     })
     return { user }
   }
